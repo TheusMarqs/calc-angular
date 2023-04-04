@@ -1,6 +1,18 @@
 <form>
-    <input type="number" name="num1" [(ngModel)]="num1">
-    <input type="number" name="num2" [(ngModel)]="num2">
-    <button type="button" (click)="calc()">Somar</button>
-    <input type="number" name="result" [(ngModel)]="result" disabled>
+    <div class="input-group mb-3">
+        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="num1" [(ngModel)]="num1">
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="num2" [(ngModel)]="num2">
+    </div>
+
+    <button type="button" class="btn btn-info btns" (click)="calc('+')">+</button>
+    <button type="button" class="btn btn-info btns" (click)="calc('-')">-</button>
+    <button type="button" class="btn btn-info btns" (click)="calc('*')">*</button>
+    <button type="button" class="btn btn-info btns" (click)="calc('/')">/</button>
+
+    <div class="input-group mb-3 mt-3">
+        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="result" [(ngModel)]="result" disabled>
+    </div>
 </form>
